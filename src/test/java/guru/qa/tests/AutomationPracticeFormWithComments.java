@@ -1,19 +1,41 @@
 package guru.qa.tests;
 
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static guru.qa.tests.TestData.*;
 
-public class AutomationPracticeFormTests extends TestBase {
+public class AutomationPracticeFormWithComments {
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.startMaximized = true;
+        Configuration.baseUrl = "https://demoqa.com";
+    }
 
     @Test
     void fillFormTest() {
-        open("/automation-practice-form");
+        String firstName = "Egor";
+        String lastName = "Ivanov";
+        String userEmail = "egor.ivanov@yandex.ru";
+        String gender = "Male";
+        String phone = "8912345678";
+        String month = "July";
+        String year = "2005";
+        String day = "012";
+        String dayShort = day.substring(1,3);
+        String subject = "Math";
+        String hobby = "Reading";
+        String fileName = "img/img1.jpg";
+        String fileNameShort = fileName.replaceAll("^(.+/)","");
+        String currentAddress = "main street";
+        String state = "NCR";
+        String city = "Delhi";
 
+        open("/automation-practice-form");
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(userEmail);
