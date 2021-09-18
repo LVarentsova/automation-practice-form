@@ -3,12 +3,9 @@ package guru.qa.tests;
 import guru.qa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static guru.qa.tests.TestData.*;
+import static guru.qa.tests.TestDataWithFaker.*;
 
-public class RegistrationFormWithPageObject extends TestBase {
+public class RegistrationFormWithPageObjectTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
@@ -40,6 +37,5 @@ public class RegistrationFormWithPageObject extends TestBase {
                 .checkResultsValue("Picture", fileNameShort)
                 .checkResultsValue("Address", currentAddress)
                 .checkResultsValue("State and City", state + " " + city);
-
     }
 }

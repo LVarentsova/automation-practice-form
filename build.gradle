@@ -24,6 +24,9 @@ dependencies {
     //Junit5
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2") // для анатаций Junit
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2") // для запуска из командной строки, идеи
+
+    //Faker
+    implementation 'com.github.javafaker:javafaker:1.0.2' //библиотека для формирования рандомных значений
 }
 
 test {

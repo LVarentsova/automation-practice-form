@@ -1,9 +1,6 @@
 package guru.qa.pages.components;
 
-import guru.qa.pages.RegistrationPage;
-
 import static com.codeborne.selenide.Selenide.$;
-import static guru.qa.tests.TestData.*;
 
 public class CalendarComponent {
 
